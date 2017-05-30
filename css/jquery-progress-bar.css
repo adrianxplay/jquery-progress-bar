@@ -1,0 +1,31 @@
+.loading-bar {
+  display: block;
+  margin: 0 auto;
+  max-width: 450px;
+}
+.loading-bar .timer {
+  float: right;
+}
+.loading-bar .bar-container {
+  display: block;
+  direction: rtl;
+}
+.loading-bar .bar-container>.bar {
+  display: block;
+  direction: ltr;
+  position: absolute;
+  height: 15px;
+  width: 75%;
+  margin-right: calc(100vw - 90%);
+  max-width: 300px;
+  transition: all 60s ease;
+}
+.loading-bar .bar-container>.bar.border-bar {
+  border: 1px solid #fff;
+}
+.loading-bar .bar-container>.bar.background-bar {
+  background-color: #f00;
+}
+.loading-bar.active>.bar-container>.bar.background-bar {
+  width: 0;
+}

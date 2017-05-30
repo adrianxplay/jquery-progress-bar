@@ -1,0 +1,24 @@
+.loading-bar
+  display block
+  margin 0 auto
+  max-width 450px
+  .timer
+    float right
+  .bar-container
+    display block
+    direction rtl
+    &>.bar
+      display block
+      direction ltr
+      position absolute
+      height 15px
+      width 75%
+      margin-right calc(100vw - 90%)
+      max-width: 300px
+      transition all 60s ease
+    &>.bar.border-bar
+      border 1px solid white
+    &>.bar.background-bar
+      background-color red
+  &.active>.bar-container>.bar.background-bar
+    width 0
